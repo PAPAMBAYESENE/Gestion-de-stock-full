@@ -1,0 +1,21 @@
+<form [formGroup]="categorie">
+    <h2 mat-dialog-title>Ajouter une catégorie </h2>
+    <mat-dialog-content class="mat-typography">
+        <mat-form-field appearance="outline">
+            <mat-label>code</mat-label>
+            <input matInput placeholder="saisir votre code" formControlName="code">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>libelle</mat-label>
+            <input matInput placeholder="saisir libelle"formControlName="libelle">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close>Annuler</button>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial  (click)="onsubmit()">Enregistrer</button>
+    </mat-dialog-actions>
+</form>
